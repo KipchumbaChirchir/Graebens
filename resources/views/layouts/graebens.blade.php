@@ -45,14 +45,17 @@
             <div class="container py-2">
                 <div id="hidden" style="display: none;">
                     <div class="text-center">
-                        <div><a href="#" class="text-white"><i class="fa fa-phone fa-lg"> <span>Tel: +254 722 819933</span></i></a></div>
-                        <div class="ml-3"><a href="#" class="text-white"><i class="fa fa-clock-o fa-lg"> <span>Monday – Saturday 7:00am – 18:00pm</span></i></a></div>
+                        <div><a href="#" class="text-white"><i class="fa fa-phone fa-lg"> <span>Tel: +254 722
+                                        819933</span></i></a></div>
+                        <div class="ml-3"><a href="#" class="text-white"><i class="fa fa-clock-o fa-lg"> <span>Monday –
+                                        Saturday 7:00am – 18:00pm</span></i></a></div>
                     </div>
                 </div>
                 <div id="show" class="" style="display: none">
                     <div class="col-9">
                         <div class="row d-flex">
-                            <div><a href="#" class="text-white"><i class="fa fa-phone fa-lg"> <span>Tel: +254 722 819933</span></i></a></div>
+                            <div><a href="#" class="text-white"><i class="fa fa-phone fa-lg"> <span>Tel: +254 722
+                                            819933</span></i></a></div>
                             <div class="ml-3"><a href="#" class="text-white"><i class="fa fa-envelope fa-lg">
                                         <span>info@drivingschool.com</span></i></a></div>
                             <div class="ml-3"><a href="#" class="text-white"><i class="fa fa-clock-o fa-lg">
@@ -92,19 +95,19 @@
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
-                        <li class="nav-item font-weight-bold"><a href="{{ route('Default') }}"
+                        <li class="nav-item font-weight-bold h5"><a href="{{ route('Default') }}"
                                 class="nav-link">Home</a></li>
-                        <li class="nav-item font-weight-bold"><a href="{{ route('Branches') }}"
+                        <li class="nav-item font-weight-bold h5"><a href="{{ route('Branches') }}"
                                 class="nav-link">Branches</a></li>
-                        <li class="nav-item font-weight-bold"><a href="{{ route('Courses') }}"
+                        <li class="nav-item font-weight-bold h5"><a href="{{ route('Courses') }}"
                                 class="nav-link">Courses</a></li>
-                        <li class="nav-item font-weight-bold"><a href="{{ route('Assessment') }}"
+                        <li class="nav-item font-weight-bold h5"><a href="{{ route('Assessment') }}"
                                 class="nav-link">Driver Assessment</a></li>
-                        <li class="nav-item font-weight-bold"><a href="{{ route('Contact') }}"
+                        <li class="nav-item font-weight-bold h5"><a href="{{ route('Contact') }}"
                                 class="nav-link">Contact</a></li>
-                        <li class="nav-item font-weight-bold"><a href="{{ route('OnlineRegistration') }}"
+                        <li class="nav-item font-weight-bold h5"><a href="{{ route('OnlineRegistration') }}"
                                 class="nav-link">Online Registration</a></li>
-                        <li class="nav-item font-weight-bold"><a href="{{ route('login') }}" class="nav-link">|
+                        <li class="nav-item font-weight-bold h5"><a href="{{ route('login') }}" class="nav-link">|
                                 Admin</a></li>
                         <!-- Authentication Links -->
                         {{-- @guest
@@ -186,7 +189,8 @@
                             <div class="input-group mb-3">
                                 <input type="email" class="form-control" placeholder="enter your email...">
                                 <div class="input-group-append">
-                                    <button class="btn btn-outline-secondary btn-primary text-white" type="submit" id="newslatter" onclick="clickFunction()">Submit</button>
+                                    <button class="btn btn-outline-secondary btn-primary text-white" type="submit"
+                                        id="newslatter" onclick="clickFunction()">Submit</button>
                                 </div>
                             </div>
                         </form>
@@ -220,7 +224,7 @@
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
     <script>
-        function clickFunction(){
+        function clickFunction() {
             document.getElementById('newslatter').innerHTML = 'Submitting....';
         }
     </script>

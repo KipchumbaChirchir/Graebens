@@ -14,7 +14,7 @@
                 <div class="ml-4 bg-info rounded">
                     <div class="p-2">
                         <h1 class="font-weight-bold text-white">Welcome to <span class="text-white">{{config('app.name', 'Talanta')}}</span></h1>
-                        <h1 class="font-weight-bold text-white">Put the key in the ignition.</h1>
+                        <h1 class="font-weight-bold text-white font-italic h4">Put the key in the ignition.</h1>
 
                         <div class="d-flex">
                             <a href="#" class="btn btn-info"><i class="fa fa-arrow-right"></i> Get Started</a>

@@ -16,17 +16,20 @@
                     @csrf
                     <div class="form-row">
                         <div class="col-md-4 mb-3">
-                            <input type="text" name="first_name" value="" class="form-control form-control-md" placeholder="First Name">
+                            <input type="text" name="first_name" value="" class="form-control form-control-md"
+                                placeholder="First Name">
                         </div>
                         <div class="col-md-4 mb-3">
-                            <input type="text" name="second_name" value="" class="form-control form-control-md" placeholder="Second Name">
+                            <input type="text" name="second_name" value="" class="form-control form-control-md"
+                                placeholder="Second Name">
                         </div>
                         <div class="col-md-4 mb-3">
-                            <input type="email" name="email" value="" class="form-control form-control-md" placeholder="E-mail">
+                            <input type="email" name="email" value="" class="form-control form-control-md"
+                                placeholder="E-mail">
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="message">What is  your thought?</label>
+                        <label for="message">What is your thought?</label>
                         <textarea name="message" id="message" cols="30" rows="10" class="form-control"></textarea>
                     </div>
                 </form>
@@ -84,6 +87,10 @@
                     <hr>
                 </div>
             </div>
+        </div>
+        <div id="facebook">
+            <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+            <div class="elfsight-app-59006b42-9c7b-4bc0-93fe-5ad0c6e7a641"></div>
         </div>
     </div>
 
