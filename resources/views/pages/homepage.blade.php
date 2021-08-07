@@ -91,5 +91,11 @@
                 </div>
             </div>
         </div>
+        <script>
+            document.getElementById('button').addEventListener('click', (event) => {
+                event.preventDefault()
+                document.getElementById('button').innerHTML = "Loading...";
+            });
+        </script>
     </section>
 @endsection

@@ -45,10 +45,10 @@ window.addEventListener('resize', function(event){
     }
 });
 
-document.getElementById('button').addEventListener('click', (event) => {
-    event.preventDefault()
-    document.getElementById('button').innerHTML = "Loading...";
-});
+// document.getElementById('button').addEventListener('click', (event) => {
+//     event.preventDefault()
+//     document.getElementById('button').innerHTML = "Loading...";
+// });
 
 document.getElementById('scrollToTop').addEventListener('click', (event) => {
     event.preventDefault()
