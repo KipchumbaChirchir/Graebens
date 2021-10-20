@@ -9,6 +9,8 @@ class Registration extends Model
 {
     use HasFactory;
 
+    protected $primaryKey = 'student_id';
+
     protected $fillable = [
         'first_name',
         'last_name',

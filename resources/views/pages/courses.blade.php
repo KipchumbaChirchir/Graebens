@@ -44,7 +44,7 @@
                     <div class="h5 font-weight-bold">Description of Vehicle to Operate and Restrictions</div>
                 </div>
                 <div class="col-xm-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
-                    <div class="h5 font-weight-bold">Minimum Requirements</div>
+                    <div class="h5 font-weight-bold">Requirements</div>
                 </div>
             </div>
             {{-- Category One --}}
@@ -63,7 +63,7 @@
                     </div>
                 </div>
                 <div class="col-xm-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
-                    <div class="h6">Minimum Requirements</div>
+                    <div class="h6">18 Years of age and above and hold a National/Passport Identification</div>
                 </div>
             </div>
             {{-- Category Two --}}
@@ -78,7 +78,7 @@
                     </div>
                 </div>
                 <div class="col-xm-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
-                    <div class="h6">Minimum Requirements</div>
+                    <div class="h6">18 Years of age and above and hold a National/Passport Identification</div>
                 </div>
             </div>
             {{-- Category Three --}}
@@ -101,7 +101,7 @@
                     </div>
                 </div>
                 <div class="col-xm-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
-                    <div class="h6">Minimum Requirements</div>
+                    <div class="h6">18 Years of age and above and hold a National/Passport Identification</div>
                 </div>
             </div>
             {{-- Category Four --}}
@@ -116,7 +116,7 @@
                     </div>
                 </div>
                 <div class="col-xm-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
-                    <div class="h6">Minimum Requirements</div>
+                    <div class="h6">18 Years of age and above and hold a National/Passport Identification</div>
                 </div>
             </div>
             {{-- Category Five --}}
@@ -135,7 +135,7 @@
                     </div>
                 </div>
                 <div class="col-xm-12 col-sm-12 col-md-3 col-lg-3 col-xl-3">
-                    <div class="h6">Minimum Requirements</div>
+                    <div class="h6">18 Years of age and above and hold a National/Passport Identification</div>
                 </div>
             </div>
         </div>

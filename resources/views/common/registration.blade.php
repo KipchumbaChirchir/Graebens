@@ -58,12 +58,14 @@
                     <select class="form-control form-control-sm" name="course_selection"
                         value="{{ old('course_selection') }}">
                         <option selected disabled>Select Course</option>
-                        <option value="1">Category A2</option>
-                        <option value="2">Category B2 <span class="font-weight-bold">Light</span></option>
-                        <option value="3">Category B3 <span class="font-weight-bold">Professional</span></option>
-                        <option value="4">Category C1 <span class="font-weight-bold">Light Trucks</span></option>
-                        <option value="5">Category D1 <span class="font-weight-bold">Vans</span></option>
-                        <option value="6">Refresher Course</option>
+                        @if (isset($courses) && count($courses) > 0)
+                        @foreach ($courses as $course)
+                            <option value="{{$course->id}}">{{$course->course_name}}</option>
+                        @endforeach
+                        @else
+                        <option value="">--No data--</option>
+
+                        @endif
                     </select>
                     @error('course_selection')
                         <div class="text-danger">{{ $message }}</div>
@@ -73,9 +75,14 @@
                     <select class="form-control form-control-sm" name="course_branch"
                         value="{{ old('course_branch') }}">
                         <option selected disabled>Select Branch</option>
-                        <option value="1" class="text-capitalize">Jamii Villas, Ayany Kibera Drive (H/Office)</option>
-                        <option value="2" class="text-capitalize">Arcade Discounts Ngong Road (Adams Arcade)</option>
-                        <option value="3" class="text-capitalize">Kawangware 56</option>
+                        @if (isset($branches) && count($branches) > 0)
+                        @foreach ($branches as $branch)
+                            <option value="{{$branch->id}}">{{$branch->branch_name}}</option>
+                        @endforeach
+                        @else
+                        <option value="">--No data--</option>
+
+                        @endif
                     </select>
                     @error('course_branch')
                         <div class="text-danger">{{ $message }}</div>

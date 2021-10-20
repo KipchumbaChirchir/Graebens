@@ -53,6 +53,11 @@
                                 </li>
                             @endif
                         @else
+                        @if (Route::has('school.information'))
+                            <li class="nav-item">
+                                <a href="{{route('school.information')}}" class="nav-link">My School</a>
+                            </li>
+                        @endif
                             @if (Route::has('home'))
                                 <li class="nav-item">
                                     <a href="{{route('home')}}" class="nav-link">Students</a>
@@ -72,7 +77,7 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                    <a class="dropdown-item btn btn-sm" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                                  document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>

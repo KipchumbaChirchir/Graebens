@@ -30,27 +30,27 @@
                                 <td class="text-uppercase">jamii villas, Ayany kibera drive (H/Office)</td>
                                 <td>07:00 AM</td>
                                 <td>18:00 PM</td>
-                                <td>0715738974</td>
+                                <td>0722 819933</td>
                             </tr>
                             <tr>
                                 <th scope="row">2</th>
                                 <td class="text-uppercase">Arcade Discounts ngong road (adams Arcade)</td>
                                 <td>07:00 AM</td>
                                 <td>18:00 PM</td>
-                                <td>0715738974</td>
+                                <td>0722 819933</td>
                             </tr>
                             <tr>
                                 <th scope="row">3</th>
                                 <td class="text-uppercase">Kawangware 56</td>
                                 <td>07:00 AM</td>
                                 <td>18:00 PM</td>
-                                <td>0715738974</td>
+                                <td>0722 819933</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
                 <div class="col-md-4 col-xs-12 col-sm-12">
-                    <iframe src="https://www.google.com/maps/d/embed?mid=1dw0yQ_Y8C73Bbl-2JvlBS1OWVm7Fy6vo" class="w-100"></iframe>
+                    <iframe src="https://www.google.com/maps/d/embed?mid=1dw0yQ_Y8C73Bbl-2JvlBS1OWVm7Fy6vo" class="w-100" style="height: 300px"></iframe>
                 </div>
             </div>
         </div>

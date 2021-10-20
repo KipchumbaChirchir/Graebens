@@ -2,7 +2,8 @@
 
 namespace App\Http\Controllers;
 
-
+use App\Models\Graebens\Branches;
+use App\Models\Graebens\DrivingCourses;
 use App\Models\Graebens\Registration;
 
 class HomeController extends Controller
@@ -25,10 +26,13 @@ class HomeController extends Controller
     public function index()
     {
         $students = Registration::paginate(20);
-        // return view('home', [
-        //     'students' => $data
-        // ]);
-        return view('home', compact('students'));
+        $courses = DrivingCourses::get()->all();
+        $locations = Branches::get()->all();
+        return view('home', [
+            'students' => $students,
+            'courses' => $courses,
+            'locations' => $locations
+        ]);
     }
 
     public function student_registration(){

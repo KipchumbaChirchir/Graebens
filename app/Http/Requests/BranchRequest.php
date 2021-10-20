@@ -24,14 +24,16 @@ class BranchRequest extends FormRequest
     public function rules()
     {
         return [
-            'branch_name' => 'required'
+            'branch_name' => 'required',
+            'branch_contact' => 'required'
         ];
     }
 
     public function messages()
     {
         return [
-            'branch_name.required' => 'Branch name should not be empty!!'
+            'branch_name.required' => 'Branch name should not be empty!!',
+            'branch_contact.required' => 'Branch contact should not be empty!!'
         ];
     }
 }

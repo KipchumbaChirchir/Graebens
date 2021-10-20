@@ -34,10 +34,4 @@ class RegistrationController extends Controller
         }
 
     }
-
-    // Edit Student
-    public function edit($id){
-        $registration = Registration::findOrFail($id);
-        return view('graebens.editstudent')->with($registration);
-    }
 }

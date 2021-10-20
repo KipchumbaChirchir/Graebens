@@ -28,7 +28,7 @@ class UserStoreRequest extends FormRequest
             'last_name' => 'required',
             'phone_number' => 'required',
             'gender' => 'required',
-            'user_email' => 'unique:registrations,user_email,except,id',
+            'user_email' => 'unique:registrations,user_email,except,student_id',
             'user_identification' => 'required|unique:registrations,user_identification',
             'course_branch' => 'required',
             'course_selection' => 'required',

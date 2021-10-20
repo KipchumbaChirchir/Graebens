@@ -43,7 +43,7 @@
     <div id="app">
         <div class="bg-dark" id="top-of-nav">
             <div class="container py-2">
-                <div id="hidden" style="display: none;">
+                <div id="hidden">
                     <div class="text-center">
                         <div><a href="#" class="text-white"><i class="fa fa-phone fa-lg"> <span>Tel: +254 722
                                         819933</span></i></a></div>
@@ -51,7 +51,7 @@
                                         Saturday 7:00am – 18:00pm</span></i></a></div>
                     </div>
                 </div>
-                <div id="show" class="" style="display: none">
+                {{-- <div id="show" class="" style="display: none">
                     <div class="col-9">
                         <div class="row d-flex">
                             <div><a href="#" class="text-white"><i class="fa fa-phone fa-lg"> <span>Tel: +254 722
@@ -75,12 +75,12 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> --}}
             </div>
         </div>
-        <nav id="navbar" class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <nav id="navbar" class="navbar navbar-expand-md navbar-light bg-white shadow-sm" style="background-color: #00008B !important">
             <div class="container-fluid">
-                <div class="navbar-brand text-uppercase"> Graebens </div>
+                <div class="navbar-brand text-uppercase text-white h5 font-weight-bold"> Graebens </div>
                 <button class="navbar-toggler" type="button" data-toggle="collapse"
                     data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                     aria-label="{{ __('Toggle navigation') }}">
@@ -95,25 +95,25 @@
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
-                        <li class="nav-item font-weight-bold h5"><a href="{{ route('Default') }}"
-                                class="nav-link">Home</a></li>
-                        <li class="nav-item font-weight-bold h5"><a href="{{ route('Branches') }}"
-                                class="nav-link">Branches</a></li>
-                        <li class="nav-item font-weight-bold h5"><a href="{{ route('Courses') }}"
-                                class="nav-link">Courses</a></li>
-                        <li class="nav-item font-weight-bold h5"><a href="{{ route('Assessment') }}"
-                                class="nav-link">Driver Assessment</a></li>
-                        <li class="nav-item font-weight-bold h5"><a href="{{ route('Contact') }}"
-                                class="nav-link">Contact</a></li>
-                        <li class="nav-item font-weight-bold h5"><a href="{{ route('OnlineRegistration') }}"
-                                class="nav-link">Online Registration</a></li>
-                        <li class="nav-item font-weight-bold h5"><a href="{{ route('login') }}" class="nav-link">|
+                        <li class="nav-item font-weight-bold"><a href="{{ route('Default') }}"
+                                class="nav-link text-white">Home</a></li>
+                        <li class="nav-item font-weight-bold"><a href="{{ route('Branches') }}"
+                                class="nav-link text-white">Branches</a></li>
+                        <li class="nav-item font-weight-bold"><a href="{{ route('Courses') }}"
+                                class="nav-link text-white">Courses</a></li>
+                        <li class="nav-item font-weight-bold"><a href="{{ route('Assessment') }}"
+                                class="nav-link text-white">Driver Assessment</a></li>
+                        <li class="nav-item font-weight-bold"><a href="{{ route('Contact') }}"
+                                class="nav-link text-white">Contact</a></li>
+                        <li class="nav-item font-weight-bold"><a href="{{ route('OnlineRegistration') }}"
+                                class="nav-link text-white">Online Registration</a></li>
+                        <li class="nav-item font-weight-bold"><a href="{{ route('login') }}" class="nav-link text-white">|
                                 Admin</a></li>
                         <!-- Authentication Links -->
                         {{-- @guest
                             @if (Route::has('login'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('login') }}"> <i class="fa fa-user"></i>  {{ __('Login') }}</a>
+                                    <a class="nav-link text-white" href="{{ route('login') }}"> <i class="fa fa-user"></i>  {{ __('Login') }}</a>
                                 </li>
                             @endif
 
@@ -204,7 +204,7 @@
                             <div class="col-8 col-md-6">
                                 <div class="h4 font-weight-bold text-uppercase"> connect with us </div>
                                 <div class="d-inline-flex">
-                                    <div><i class="fa fa-facebook fa-lg p-2"></i></div>
+                                    <div> <a href="https://www.facebook.com/Graebens/" target="blank"> <i class="fa fa-facebook fa-lg p-2"></i> </a> </div>
                                     <div class="ml-2"><i class="fa fa-twitter fa-lg p-2"></i></div>
                                     <div class="ml-2"><i class="fa fa-instagram fa-lg p-2"></i></div>
                                     <div class="ml-2"><i class="fa fa-youtube fa-lg p-2"></i></div>
@@ -215,10 +215,7 @@
                 </div>
             </div>
         </footer>
-
-        <button class="btn btn-danger" type="submit" id="scrollToTop"
-            style="position: fixed; z-indez: 99; bottom: 20px; right: 30px; display: none"><i
-                class="fa fa-angle-up fa-2x" aria-hidden="true"></i></button>
+        <button class="btn btn-danger btn-sm" type="button" id="scrollToTop" style="position: fixed; z-indez: 99; bottom: 20px; right: 30px; display: none"><i class="fa fa-angle-up fa-2x" aria-hidden="true"></i></button>
     </div>
 
     <!-- Scripts -->

@@ -25,7 +25,7 @@
                             <strong>{{ $message }}</strong>
                         </div>
                     @enderror
-                    <div class="float-right"><button class="btn btn-primary" type="button"
+                    <div class="float-right"><button class="btn btn-primary btn-sm" type="button"
                             data-target="#branch-registration-modal" data-toggle="modal">Register Branch</button></div>
                 </div>
                 <div class="card-body">
@@ -34,6 +34,7 @@
                             <tr>
                                 <th>#</th>
                                 <th>Branch Name</th>
+                                <th>Contact Information</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
@@ -45,14 +46,15 @@
                                     <tr>
                                         <td>{{ $i }}</td>
                                         <td>{{ $branch->branch_name }}</td>
+                                        <td>{{ $branch->branch_contact }}</td>
                                         <td>
                                             <form action="" method="POST">
 
-                                                <a href="{{ route('home.edit', ['id' => $branch->id]) }}" title="show">
+                                                <a href="{{ route('Branches.show', ['id' => $branch->id]) }}" title="show">
                                                     <i class="fa fa-eye text-success  fa-lg"></i>
                                                 </a>
 
-                                                <a href="" title="edit">
+                                                <a href="{{ route('Branches.show', ['id' => $branch->id]) }}" title="edit">
                                                     <i class="fa fa-edit  fa-lg"></i>
                                                 </a>
 
@@ -86,15 +88,24 @@
                         <form method="post" action="{{ route('StoreBranch') }}">
                             @csrf
                             <div class="modal-body">
-                                <div class="form-group">
-                                    <label for="branch_name">Branch Name</label>
-                                    <input id="branch_name" class="form-control" type="text" name="branch_name">
-                                    @error('branch_name')
-                                        <div class="text-danger">{{ $message }}</div>
-                                    @enderror
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <label for="branch_name">Branch Name</label>
+                                        <input id="branch_name" class="form-control form-control-sm" type="text" name="branch_name">
+                                        @error('branch_name')
+                                            <div class="text-danger">{{ $message }}</div>
+                                        @enderror
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        <label for="branch_contact">Branch Contact</label>
+                                        <input id="branch_contact" class="form-control form-control-sm" type="text" name="branch_contact">
+                                        @error('branch_contact')
+                                            <div class="text-danger">{{ $message }}</div>
+                                        @enderror
+                                    </div>
                                 </div>
                             </div>
-                            <div class="modal-footer"><button class="btn btn-warning" type="submit">Save</button></div>
+                            <div class="modal-footer"><button class="btn btn-warning btn-sm" type="submit">Save</button></div>
                         </form>
                     </div>
                 </div>

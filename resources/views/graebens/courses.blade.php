@@ -28,7 +28,7 @@
                     <div class="float-left">
                         <caption>Course list</caption>
                     </div>
-                    <div class="float-right"><button class="btn btn-primary" type="button"
+                    <div class="float-right"><button class="btn btn-primary btn-sm" type="button"
                             data-target="#course-registration-modal" data-toggle="modal">Register Course</button></div>
                 </div>
                 <div class="card-body">
@@ -51,11 +51,11 @@
                                         <td>
                                             <form action="" method="POST">
 
-                                                <a href="{{ route('home.edit', ['id' => $course->id]) }}" title="show">
+                                                <a href="{{ route('GraebensCourses.show', ['id' => $course->id]) }}" title="show">
                                                     <i class="fa fa-eye text-success  fa-lg"></i>
                                                 </a>
 
-                                                <a href="" title="edit">
+                                                <a href="{{ route('GraebensCourses.show', ['id' => $course->id]) }}" title="edit">
                                                     <i class="fa fa-edit  fa-lg"></i>
                                                 </a>
 
@@ -97,7 +97,7 @@
                                     @enderror
                                 </div>
                             </div>
-                            <div class="modal-footer"><button class="btn btn-warning" type="submit">Save</button></div>
+                            <div class="modal-footer"><button class="btn btn-warning btn-sm" type="submit">Save</button></div>
                         </form>
                     </div>
                 </div>

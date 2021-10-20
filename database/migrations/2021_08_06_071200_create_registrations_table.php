@@ -14,7 +14,7 @@ class CreateRegistrationsTable extends Migration
     public function up()
     {
         Schema::create('registrations', function (Blueprint $table) {
-            $table->id();
+            $table->bigIncrements('student_id');
             $table->string('first_name');
             $table->string('last_name');
             $table->string('phone_number');

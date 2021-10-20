@@ -17,7 +17,7 @@
                         <h1 class="font-weight-bold text-white font-italic h4">Put the key in the ignition.</h1>
 
                         <div class="d-flex">
-                            <a href="#" class="btn btn-info"><i class="fa fa-arrow-right"></i> Get Started</a>
+                            <a href="{{route('OnlineRegistration')}}" class="btn btn-info"><i class="fa fa-arrow-right"></i> Get Started</a>
                             <a href="{{route('Contact')}}" class="btn btn-primary ml-4 "><i class="fa fa-phone"> </i> <span>Contact us</span></a>
                         </div>
                     </div>
@@ -85,17 +85,24 @@
 
                         <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-xl-3 p-4">
                             <div class="h4 text-info">Fees Structure</div>
-                            <button class="btn btn-sm btn-info text-white" type="button" id="button">Download</button>
+                            @if (isset($fees_structure))
+                            <form action="{{route('fees.structure.download', ['fees_structure' => $fees_structure->fees_structure])}}" method="post">
+                                @csrf
+                                <button class="btn btn-sm btn-info text-white" type="submit" id="button">Download</button>
+                            </form>
+                            @else
+                            No fees Structure
+                            @endif
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <script>
+        {{-- <script>
             document.getElementById('button').addEventListener('click', (event) => {
                 event.preventDefault()
                 document.getElementById('button').innerHTML = "Loading...";
             });
-        </script>
+        </script> --}}
     </section>
 @endsection

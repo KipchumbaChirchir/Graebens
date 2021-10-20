@@ -26,10 +26,15 @@ class BranchesController extends Controller
 
         if ($validate) {
             $data = [
-                'branch_name' => $request->branch_name
+                'branch_name' => $request->branch_name,
+                'branch_contact' => $request->branch_contact
             ];
             Branches::create($data);
             return back()->with('success', 'Saved Successfully');
         }
+    }
+
+    public function show($id){
+        dd($id);
     }
 }

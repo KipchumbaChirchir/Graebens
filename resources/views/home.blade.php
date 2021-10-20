@@ -17,7 +17,7 @@
                 @endif
                 @yield('title')
                 <div class="float-right">
-                    <button class="btn btn-primary" type="button" data-toggle="modal"
+                    <button class="btn btn-primary btn-sm" type="button" data-toggle="modal"
                         data-target="#new-registration">Register</button>
                 </div>
             </div>
@@ -46,7 +46,7 @@
                                 <td>
                                     <form action="" method="POST">
 
-                                        <a href="{{ route('home.edit', ['id' => $student->id]) }}" title="show">
+                                        <a href="{{route('student.edit', ['student_id' => $student->student_id])}}" title="show">
                                             <i class="fa fa-eye text-success  fa-lg"></i>
                                         </a>
 
@@ -56,7 +56,6 @@
 
                                         @csrf
                                         @method('DELETE')
-
                                         <button type="submit" title="delete"
                                             style="border: none; background-color:transparent;">
                                             <i class="fa fa-trash fa-lg text-danger"></i>
@@ -73,7 +72,7 @@
             </div>
         </div>
         <div id="new-registration" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
-            <div class="modal-dialog" role="document">
+            <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title" id="exampleModalLabel">New Student Registration</h5>
@@ -82,7 +81,7 @@
                         </button>
                     </div>
 
-                    <div class="px-2">
+                    <div class="px-2 py-2">
                         <form method="post" action="{{ route('OnlineRegistration') }}">
                             @csrf
                             <div class="form-row">
@@ -146,29 +145,30 @@
                                     <select class="form-control form-control-sm" name="course_selection"
                                         value="{{ old('course_selection') }}">
                                         <option selected disabled>Select Course</option>
-                                        <option value="1">Category A2</option>
-                                        <option value="2">Category B2 <span class="font-weight-bold">Light</span></option>
-                                        <option value="3">Category B3 <span class="font-weight-bold">Professional</span>
-                                        </option>
-                                        <option value="4">Category C1 <span class="font-weight-bold">Light Trucks</span>
-                                        </option>
-                                        <option value="5">Category D1 <span class="font-weight-bold">Vans</span></option>
-                                        <option value="6">Refresher Course</option>
+                                        @if (isset($courses) && count($courses) > 0)
+                                            @foreach ($courses as $course)
+                                                <option value="{{$course->id}}">{{$course->course_name}}</option>
+                                            @endforeach
+                                        @else
+                                        <option class="text-capitalize">No Courses</option>
+                                        @endif
+
                                     </select>
                                     @error('course_selection')
                                         <div class="text-danger">{{ $message }}</div>
                                     @enderror
                                 </div>
                                 <div class="col-md-4 mb-3">
-                                    <select class="form-control form-control-sm" name="course_branch"
-                                        value="{{ old('course_branch') }}">
-                                        <option selected disabled>Select Branch</option>
-                                        <option value="1" class="text-capitalize">Jamii Villas, Ayany Kibera Drive
-                                            (H/Office)
-                                        </option>
-                                        <option value="2" class="text-capitalize">Arcade Discounts Ngong Road (Adams Arcade)
-                                        </option>
-                                        <option value="3" class="text-capitalize">Kawangware 56</option>
+                                    <select class="form-control form-control-sm" name="course_branch" value="{{ old('course_branch') }}">
+                                        <option  class="text-capitalize" disabled selected>Choose Branch</option>
+                                        @if (isset($locations) && count($locations) > 0)
+                                            @foreach ($locations as $location)
+                                                <option value="{{$location->id}}" class="text-capitalize">{{$location->branch_name}}</option>
+                                            @endforeach
+                                        @else
+                                        <option class="text-capitalize">No Branches</option>
+                                        @endif
+
                                     </select>
                                     @error('course_branch')
                                         <div class="text-danger">{{ $message }}</div>
@@ -176,7 +176,7 @@
                                 </div>
                             </div>
 
-                            <div class="form-group">
+                            {{-- <div class="form-group">
                                 <div class="form-check">
                                     <input class="form-check-input" type="checkbox" value="" id="invalidCheck3">
                                     <label class="form-check-label" for="invalidCheck3">
@@ -186,8 +186,8 @@
                                         You must agree before submitting.
                                     </div>
                                 </div>
-                            </div>
-                            <button class="btn btn-primary mb-4" id="button1" type="submit">Submit</button>
+                            </div> --}}
+                            <button class="btn btn-primary btn-sm mb-4" id="button1" type="submit">Admit</button>
                         </form>
                     </div>
                 </div>

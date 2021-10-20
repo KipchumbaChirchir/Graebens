@@ -25,29 +25,24 @@ window.addEventListener('scroll', function(){
     }
 });
 
-window.addEventListener('resize', function(event){
-    var hidden = document.getElementById('hidden');
-    var show = document.getElementById('show');
-    var newWidth = window.innerWidth;
+// window.addEventListener('resize', function(event){
+//     var hidden = document.getElementById('hidden');
+//     var show = document.getElementById('show');
+//     var newWidth = window.innerWidth;
 
-    if (newWidth <= 996) {
-        hidden.style.display = "block";
-        show.style.display = "none";
-        show.classList.remove('row');
-        show.classList.remove('d-flex');
-        show.classList.remove('justify-content-between');
-    }else{
-        hidden.style.display = "none";
-        show.style.display = "block";
-        show.classList.add('row');
-        show.classList.add('d-flex');
-        show.classList.add('justify-content-between');
-    }
-});
-
-// document.getElementById('button').addEventListener('click', (event) => {
-//     event.preventDefault()
-//     document.getElementById('button').innerHTML = "Loading...";
+//     if (newWidth <= 996) {
+//         hidden.style.display = "block";
+//         show.style.display = "none";
+//         show.classList.remove('row');
+//         show.classList.remove('d-flex');
+//         show.classList.remove('justify-content-between');
+//     }else{
+//         hidden.style.display = "none";
+//         show.style.display = "block";
+//         show.classList.add('row');
+//         show.classList.add('d-flex');
+//         show.classList.add('justify-content-between');
+//     }
 // });
 
 document.getElementById('scrollToTop').addEventListener('click', (event) => {

@@ -31,4 +31,8 @@ class CoursesController extends Controller
             return back()->with('success', 'Registration was not successful!');
         }
     }
+
+    public function show($id){
+        dd($id);
+    }
 }
